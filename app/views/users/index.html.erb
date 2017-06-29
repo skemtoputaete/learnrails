@@ -1,0 +1,22 @@
+<h1>Information about users</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+	<th>Last name</th>
+	<th>Patronymic</th>
+	<th>Phone number</th>
+	<th>Articles</th>
+  </tr>
+  
+  <%= @users.each do |user| %>
+  <tr>
+    <td><%= user.fname %></td>
+	<td><%= user.lname %></td>
+	<td><%= user.patronymic %></td>
+	<td><%= user.phone %></td>
+	<td><%= link_to 'Show', controller: 'articles', method: 'new'%></td>
+  </tr>
+  <% end %>
+</table>
+
